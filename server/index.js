@@ -4,12 +4,14 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const Promise = require('bluebird');
 const db = require('../database/index.js')
+const Repo = require('../database/index.js')
+
 let app = express();
 let port = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('../public/index.html'));
+app.use(express.static(path.join(__dirname, '../public')));
 
 Promise.promisifyAll(require("mongoose"));
 
@@ -18,9 +20,18 @@ Promise.promisifyAll(require("mongoose"));
 // });
 
 app.get('/', function (req, res) {
-  res.sendFile('../public/index.html');
   res.status(200)
   res.end()
+});
+
+app.get('/database', function (req, res) {
+  Repo.find({}, (err, results) => {
+    if (err) {
+      throw err;
+    } else {
+      res.send(results)
+    }
+  }).limit(1)
 });
 
 

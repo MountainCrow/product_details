@@ -7,16 +7,18 @@ let app = express();
 let port = 3000;
 
 app.use(cors());
-app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '../public/index.html'));
 
 Promise.promisifyAll(require("mongoose"));
 
-app.post('/', function (req, res) {
+// app.post('/', function (req, res) {
 
-});
+// });
 
 app.get('/', function (req, res) {
+  res.status(200).send('Hello There')
+  res.end()
 });
 
 

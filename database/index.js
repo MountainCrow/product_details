@@ -1,42 +1,75 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fetcher');
 const Promise = require('bluebird')
+const data = require('./sampleData.js')
 
 
-Promise.promisifyAll(mongoose)
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () { console.log('Database conneted!') })
+
 
 let repoSchema = mongoose.Schema({
-  productFeatures: Array,
-  productDescription: String,
-  productDetails: Array,  // array?
-    // activity: String,
-    // family: String,
-    // gender: String,
-    // legalNotice: String,
-    // environmentalInfo: String,
-    // features: String
-  productSpecs: Array // this should be an array?
-    // material: String,
-    // height: Number,
-    // width: Number,
-    // depth: Number,
-    // volume: Number,
-    // weight: Number,
-    // additionalCare: String
+  feature1: String,
+  feature2: String,
+  feature3: String,
+  feature4: String,
+  feature5: String,
+  description: String,
+  activityDetail: String,
+  familyDetail: String,
+  genderDetail: String,
+  legalDetail: String,
+  featuresDetail: String,
+  materialSpec: String,
+  heightSpec: Number,
+  widthSpec: Number,
+  depthSpec: Number,
+  volumeSpec: Number,
+  weightSpec: Number,
+  additionalCare: String,
+  image: String
 
 });
 
-
-
 let Repo = mongoose.model('Repo', repoSchema);
 // Saving repos from git to DB
-let save = (repos) => {
-//   for (var i = 0; i < 100; i++) {
-//     let newRepo = new Repo ({
-//     return;
-//  })
-// }
+//console.log(data)
+let save = (data) => {
+  for (var i = 0; i < data.length; i++) {
+    let newRepo = new Repo({
+      feature1: data[i].feature1,
+      feature2: data[i].feature2,
+      feature3: data[i].feature3,
+      feature4: data[i].feature4,
+      feature5: data[i].feature5,
+      description: data[i].description,
+      activityDetail: data[i].activityDetail,
+      familyDetail: data[i].familyDetail,
+      genderDetail: data[i].genderDetail,
+      legalDetail: data[i].legalDetail,
+      featuresDetail: data[i].featuresDetail,
+      materialSpec: data[i].materialSpec,
+      heightSpec: data[i].heightSpec,
+      widthSpec: data[i].widthSpec,
+      depthSpec: data[i].depthSpec,
+      volumeSpec: data[i].volumeSpec,
+      weightSpec: data[i].weightSpec,
+      additionalCare: data[i].additionalCare,
+      image: data[i].image
+    })
+    newRepo.save((err, Repo) => {
+      if (err) {
+        console.log('Error while creating database')
+      } else {
+        console.log('Saving to repo!')
+      }
+    })
+  }
 }
+// save(data.data)
+
 
 
 module.exports.save = save;

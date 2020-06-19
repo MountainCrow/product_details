@@ -34,8 +34,6 @@ app.get('/database', function (req, res) {
   }).limit(1)
 });
 
-
-
 app.listen(port, function () {
   console.log(`listening on port ${port}`);
 });

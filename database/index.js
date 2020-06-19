@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher');
+mongoose.connect('mongodb://localhost/fec');
 const Promise = require('bluebird')
 const data = require('./sampleData.js')
 
@@ -29,6 +29,7 @@ let repoSchema = mongoose.Schema({
   volumeSpec: Number,
   weightSpec: Number,
   additionalCare: String,
+  productID: Number,
   image: String
 
 });
@@ -57,7 +58,8 @@ let save = (data) => {
       volumeSpec: data[i].volumeSpec,
       weightSpec: data[i].weightSpec,
       additionalCare: data[i].additionalCare,
-      image: data[i].image
+      productID: (i + 1),
+      image: 'https://fecproductiondescription.s3-us-west-1.amazonaws.com/fjallSampleScene.jpg',
     })
     newRepo.save((err, Repo) => {
       if (err) {
@@ -71,5 +73,5 @@ let save = (data) => {
 // save(data.data)
 
 
-
+module.exports = Repo;
 module.exports.save = save;

@@ -12,7 +12,6 @@ class App extends React.Component {
     }
   };
 
-
   componentDidMount() {
     axios.get('http://localhost:3000/database')
       .then(results => {

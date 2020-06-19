@@ -19,11 +19,13 @@ Promise.promisifyAll(require("mongoose"));
 
 // });
 
-app.get('/', function (req, res) {
+const status = app.get('/', function (req, res) {
   res.status(200)
   res.end()
 });
 
+//Get request initiated in index.jsx on component mount
+// moves database data to
 app.get('/database', function (req, res) {
   Repo.find({}, (err, results) => {
     if (err) {
@@ -38,3 +40,4 @@ app.listen(port, function () {
   console.log(`listening on port ${port}`);
 });
 
+module.exports = status;

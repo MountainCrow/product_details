@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import FeatureList from './components/productFeatures.jsx';
+import DescriptionBlock from "./components/productDescription.jsx"
+import Navbar from "./components/navBar.jsx"
 
 class App extends React.Component {
   constructor(props) {
@@ -25,8 +27,15 @@ class App extends React.Component {
 
   render() {
     if (this.state.isLoaded) {
-      return <FeatureList items={this.state.items}/>
+      return (
+        <div>
+          <Navbar />
+          <FeatureList items={this.state.items} />
+          <DescriptionBlock items={this.state.items} />
+        </div>
+      )
     }
+
     return (
       <div>
         App is rendering

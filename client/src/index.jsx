@@ -5,6 +5,7 @@ import FeatureList from './components/productFeatures.jsx';
 import DescriptionBlock from "./components/productDescription.jsx"
 import Navbar from "./components/navBar.jsx"
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);

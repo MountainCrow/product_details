@@ -4,11 +4,9 @@ import styled from 'styled-components'
 const Grid = styled.div`
   margin-top: 200px;
 `;
-
 const Row = styled.div`
   display: flex;
 `;
-
 const Col = styled.div`
   flex: ${(props) => props.size};
 `;
@@ -36,7 +34,6 @@ const StyledUL = styled.ul`
   margin-left: 50px;
   margin-right: 10px;
 `;
-
 const StyledImg = styled.img`
   width: 85%;
   margin-left: 50px;
@@ -44,7 +41,6 @@ const StyledImg = styled.img`
 
   position: centered;
 `;
-
 const StyledLi = styled.li`
   margin-top: 15px;
   margin-left: 50;

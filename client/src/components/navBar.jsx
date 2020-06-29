@@ -104,6 +104,7 @@ let StyledButton = styled.button`
 let StyledImg2 = styled.img`
 
 `;
+
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -216,9 +217,7 @@ class Navbar extends React.Component {
         </Row>
       </StyledHeader>
       <div><Menus menMenuDropDownState={this.state.menDropDown} womenMenuDropDownState={this.state.womenDropDown} bagsMenuDropDownState={this.state.bagsDropDown} kidsMenuDropDownState={this.state.kidsDropDown} adventuresMenuDropDownState={this.state.adventuresDropDown}/></div>
-
       </div>
-
     )
   }
 }

@@ -28,6 +28,7 @@ let StyledHeader = styled.header`
   position: fixed;
   top: -5px;
   background: white;
+  z-index: 2;
 `;
 let StyledUl = styled.ul`
   list-style: none;
@@ -108,7 +109,6 @@ let StyledButton = styled.button`
   }
 `;
 let StyledImg2 = styled.img`
-
 `;
 
 

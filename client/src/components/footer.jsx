@@ -25,7 +25,7 @@ let StyledImgContainer = styled.div`
 `;
 let StyledUl = styled.ul`
   list-style: none;
-  margin-left: 100px;
+  margin-left: 50px;
   width: 170px;
 `;
 let StyledCrest = styled.img`

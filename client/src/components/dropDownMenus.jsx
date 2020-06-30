@@ -8,6 +8,7 @@ let StyledDiv = styled.div`
   margin-top: 60px;
   display: flex;
   background: white;
+  z-index: 2;
 `;
 let StyledUl = styled.ul`
   list-style: none;

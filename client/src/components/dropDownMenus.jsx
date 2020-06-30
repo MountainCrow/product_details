@@ -22,8 +22,7 @@ let StyledUl = styled.ul`
   padding-left: 0px;
   margin-top: 5px;
   padding-bottom: 20px;
-
-
+  z-index: 2;
 `;
 let StyledUl2 = styled.ul`
   list-style: none;

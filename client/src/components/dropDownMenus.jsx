@@ -29,7 +29,7 @@ let StyledUl2 = styled.ul`
 `;
 let Styledli = styled.li`
   padding-bottom: 10px;
-  font-family: helvetica;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -41,7 +41,7 @@ let Styledli = styled.li`
   }
 `;
 let Styledli2 = styled.li`
-  font-family: helvetica;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 200;
   font-size: 12px;
   -webkit-font-smoothing: antialiased;

@@ -9,6 +9,7 @@ let StyledFooter = styled.footer`
   display: flex;
   position: absolute;
   background-color: #E9E7E6;
+  justify-content: center;
 `;
 let StyledDiv = styled.div`
   flex-direction: row;

@@ -1,11 +1,18 @@
 import React from 'react';
 import styled from 'styled-components'
 
+
+let StyledDiv = styled.div`
+
+`;
 const Grid = styled.div`
   margin-top: 200px;
+  justify-content: center;
 `;
 const Row = styled.div`
   display: flex;
+  margin-left: 3%;
+  margin-right: 3%;
 `;
 const Col = styled.div`
   flex: ${(props) => props.size};
@@ -29,14 +36,14 @@ const StyledUL = styled.ul`
   letter-spacing: .03em;
   StyledLine-height: 1.5;
   text-rendering: geometricPrecision;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-right: 10px;
 
 `;
 const StyledImg = styled.img`
-  width: 85%;
-  margin-left: 50px;
-  margin-right: 20px;
+  width: 91%;
+  margin-left: 10px;
+  margin-right: 10px;
   position: centered;
 `;
 const StyledLi = styled.li`
@@ -47,7 +54,7 @@ const StyledLi = styled.li`
 
 let FeatureList = (props) => {
   return (
-    <div>
+    <StyledDiv>
       <Grid>
         <Row>
           <Col size={1}>
@@ -65,7 +72,7 @@ let FeatureList = (props) => {
           </Col>
         </Row>
       </Grid>
-    </div>
+    </StyledDiv>
   )
 };
 

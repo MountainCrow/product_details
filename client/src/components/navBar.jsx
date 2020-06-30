@@ -16,7 +16,7 @@ let Row = styled.div`
   place-content: center;
   padding-left: 50px;
   padding-right: 50px;
-  min-width: 1000px;
+  max-width: 1300px;
 
 `;
 let StyledHeader = styled.header`

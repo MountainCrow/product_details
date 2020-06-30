@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
+import NavBar from './navBar.jsx'
+import toggleAll from './navBar.jsx'
 
+// Styling
 let StyledDiv = styled.div`
   margin-top: 60px;
   display: flex;
@@ -14,7 +17,9 @@ let StyledUl = styled.ul`
   background: white;
   width: 100%;
   height: 250px;
-  padding-left: 100px;
+  justify-content: center;
+  padding-left: 0px;
+  margin-top: 5px;
 
 `;
 let StyledUl2 = styled.ul`
@@ -22,14 +27,13 @@ let StyledUl2 = styled.ul`
 `;
 let Styledli = styled.li`
   padding-bottom: 10px;
-  font-family: sans-serif;
-  font-weight: 700;
+  font-family: helvetica;
+  font-weight: bold;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   letter-spacing: .03em;
   line-height: 1.5;
   text-rendering: geometricPrecision;
-  padding-bottom: 5px;
   &:hover {
     color: red;
   }
@@ -42,6 +46,7 @@ let Styledli2 = styled.li`
   letter-spacing: .03em;
   line-height: 1.5;
   text-rendering: geometricPrecision;
+  white-space: nowrap;
   &:hover {
     color: red;
   }
@@ -249,35 +254,35 @@ class Menus extends React.Component {
   render() {
     if (this.props.menMenuDropDownState) {
       return (
-        <div>
+        <div onMouseLeave={this.props.toggleAll}>
           <this.mensDropDown />
         </div>
 
       )
     } else if (this.props.womenMenuDropDownState) {
       return (
-        <div>
+        <div onMouseLeave={this.props.toggleAll}>
           <this.womensDropDown />
         </div>
       )
 
     } else if (this.props.bagsMenuDropDownState) {
       return (
-        <div>
+        <div onMouseLeave={this.props.toggleAll}>
           <this.bagsDropDown />
         </div>
       )
 
     } else if (this.props.kidsMenuDropDownState) {
       return (
-        <div>
+        <div onMouseLeave={this.props.toggleAll}>
           <this.kidsDropDown />
         </div>
       )
 
     } else if (this.props.adventuresMenuDropDownState) {
       return (
-        <div>
+        <div onMouseLeave={this.props.toggleAll}>
           <this.adventuresDropDown />
         </div>
       )

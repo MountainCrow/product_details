@@ -4,6 +4,7 @@ import axios from 'axios';
 import FeatureList from './components/productFeatures.jsx';
 import DescriptionBlock from "./components/productDescription.jsx"
 import Navbar from "./components/navBar.jsx"
+import Footer from './components/footer.jsx'
 
 
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
           <Navbar />
           <FeatureList items={this.state.items} />
           <DescriptionBlock items={this.state.items} />
+          <Footer />
         </div>
       )
     }

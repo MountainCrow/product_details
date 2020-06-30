@@ -15,14 +15,12 @@ const StyledSpan = styled.span`
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #303030;
   font-family: sans-serif;
   letter-spacing: .03em;
   StyledLine-height: 1.5;
 `;
 const StyledUL = styled.ul`
   StyledList-style-type: none;
-  color: #303030;
   font-family: sans-serif;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
@@ -33,12 +31,12 @@ const StyledUL = styled.ul`
   text-rendering: geometricPrecision;
   margin-left: 50px;
   margin-right: 10px;
+
 `;
 const StyledImg = styled.img`
   width: 85%;
   margin-left: 50px;
   margin-right: 20px;
-
   position: centered;
 `;
 const StyledLi = styled.li`
@@ -47,7 +45,7 @@ const StyledLi = styled.li`
 `;
 
 
-let FeatureStyledList = (props) => {
+let FeatureList = (props) => {
   return (
     <div>
       <Grid>
@@ -71,7 +69,7 @@ let FeatureStyledList = (props) => {
   )
 };
 
-export default FeatureStyledList;
+export default FeatureList;
 
 
 

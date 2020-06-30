@@ -23,6 +23,12 @@ const Col = styled.div`
   margin-top: 50px;
   margin-bottom: 50px;
 `;
+const Col2 = styled.div`
+  flex: ${(props) => props.size};
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+`;
 
 const StyledP = styled.p`
   font-size: 14px;
@@ -41,6 +47,13 @@ const StyledH3 = styled.h3`
   letter-spacing: .03em;
   StyledLine-height: 1.5;
 `;
+const StyledBorder = styled.div`
+  padding-left: 50px;
+  border-left: 1px;
+  border-left-style: solid;
+  border-left-color: lightgray;
+
+`;
 
 
 
@@ -50,25 +63,27 @@ let DescriptionBlock = (props) => {
     <div>
       <Grid>
         <Row>
-        <Col size={1}>
-          <StyledH3>PRODUCT DESCRIPTION</StyledH3>
-          <StyledP>{props.items.data[0].description}</StyledP>
-          <StyledP><strong>Activity: </strong>{props.items.data[0].activityDetail}</StyledP>
-          <StyledP><strong>Family: </strong>{props.items.data[0].familyDetail}</StyledP>
-          <StyledP><strong>Gender: </strong>{props.items.data[0].genderDetail}</StyledP>
-          <StyledP><strong>Legal notice: </strong>{props.items.data[0].legalDetail}</StyledP>
-          <StyledP><strong>Features: </strong>{props.items.data[0].featuresDetail}</StyledP>
-        </Col>
-        <Col size={1}>
-          <StyledH3>PRODUCT SPECIFICATIONS</StyledH3>
-          <StyledP> <strong>Material: </strong>{props.items.data[0].materialSpec}</StyledP>
-          <StyledP><strong>Height: </strong>{props.items.data[0].heightSpec} cm</StyledP>
-          <StyledP><strong>Width: </strong>{props.items.data[0].widthSpec} cm</StyledP>
-          <StyledP><strong>Depth: </strong>{props.items.data[0].depthSpec} cm</StyledP>
-          <StyledP><strong>Volume: </strong>{props.items.data[0].volumeSpec} l</StyledP>
-          <StyledP><strong>Weight: </strong> {props.items.data[0].weightSpec} g</StyledP>
-          <StyledP><strong>Additional Care Instructions: </strong>{props.items.data[0].additionalCare}</StyledP>
-        </Col>
+          <Col size={1}>
+            <StyledH3>PRODUCT DESCRIPTION</StyledH3>
+            <StyledP>{props.items.data[0].description}</StyledP>
+            <StyledP><strong>Activity: </strong>{props.items.data[0].activityDetail}</StyledP>
+            <StyledP><strong>Family: </strong>{props.items.data[0].familyDetail}</StyledP>
+            <StyledP><strong>Gender: </strong>{props.items.data[0].genderDetail}</StyledP>
+            <StyledP><strong>Legal notice: </strong>{props.items.data[0].legalDetail}</StyledP>
+            <StyledP><strong>Features: </strong>{props.items.data[0].featuresDetail}</StyledP>
+          </Col>
+          <Col2 size={1}>
+            <StyledBorder>
+              <StyledH3>PRODUCT SPECIFICATIONS</StyledH3>
+              <StyledP> <strong>Material: </strong>{props.items.data[0].materialSpec}</StyledP>
+              <StyledP><strong>Height: </strong>{props.items.data[0].heightSpec} cm</StyledP>
+              <StyledP><strong>Width: </strong>{props.items.data[0].widthSpec} cm</StyledP>
+              <StyledP><strong>Depth: </strong>{props.items.data[0].depthSpec} cm</StyledP>
+              <StyledP><strong>Volume: </strong>{props.items.data[0].volumeSpec} l</StyledP>
+              <StyledP><strong>Weight: </strong> {props.items.data[0].weightSpec} g</StyledP>
+              <StyledP><strong>Additional Care Instructions: </strong>{props.items.data[0].additionalCare}</StyledP>
+            </StyledBorder>
+          </Col2>
         </Row>
       </Grid>
     </div>

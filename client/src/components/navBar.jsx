@@ -40,7 +40,7 @@ let StyledUl = styled.ul`
 let StyledLi = styled.li`
   margin-left: 25px;
   margin-top: 10px;
-  font-family: sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 600;
   font-size: 14px;
   text-align: center;

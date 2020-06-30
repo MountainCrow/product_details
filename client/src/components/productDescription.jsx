@@ -35,7 +35,7 @@ const Col2 = styled.div`
 const StyledP = styled.p`
   font-weight: 400;
   color: #303030;
-  font-family: helvetica;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 14px;
   line-height: 22px;
 `;
@@ -43,7 +43,7 @@ const StyledH3 = styled.h3`
   font-size: 18px;
   font-weight: 600;
   color: #303030;
-  font-family: sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   letter-spacing: .03em;
   margin-block-end: 0em;
 `;

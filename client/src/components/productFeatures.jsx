@@ -24,13 +24,13 @@ const StyledSpan = styled.span`
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   letter-spacing: .03em;
   StyledLine-height: 1.5;
 `;
 const StyledUL = styled.ul`
   StyledList-style-type: none;
-  font-family: helvetica;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 200;

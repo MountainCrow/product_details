@@ -7,7 +7,7 @@ let StyledDiv = styled.div`
   justify-content: center;
 `;
 const Grid = styled.div`
-  margin-top: 200px;
+  margin-top: 100px;
   justify-content: center;
   max-width: 1200px;
 `;

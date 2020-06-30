@@ -37,12 +37,12 @@ let StyledCrest = styled.img`
 let StyledLi = styled.li`
   font-size: 16px;
   font-weight: 600;
-  font-family: helvetica;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   padding-bottom: 10px;
   -webkit-font-smoothing: antialiased;
 `;
 let Styledli2 = styled.li`
-  font-family: sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 400;
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
@@ -56,7 +56,7 @@ let Styledli2 = styled.li`
   }
 `;
 let Styledli3 = styled.li`
-  font-family: sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 400;
   font-size: 12px;
   -webkit-font-smoothing: antialiased;

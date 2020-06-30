@@ -5,34 +5,34 @@ import logo from './footerLogo.png'
 
 
 let StyledFooter = styled.footer`
-  margin: 200px 40px 75px 40px;
-  max-width: 1200px;
-  display: flex-root;
-  position: relative;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  background-color: #E9E7E6;
 `;
 let StyledDiv = styled.div`
-  margin: 0px 5px;
   flex-direction: row;
   display: flex;
-  max-width: 1
+  padding: 75px 75px;
 `;
 let StyledDiv2 = styled.div`
   display: flex;
   margin-inline-start: auto;
+
 `;
 let StyledImgContainer = styled.div`
   display: grid;
 `;
 let StyledUl = styled.ul`
   list-style: none;
-  margin: 0px;
+  margin-left: 150px;
 `;
 let StyledCrest = styled.img`
   position: relative;
   padding-top: 150px;
 `;
 let StyledLi = styled.li`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   font-family: helvetica;
   padding-bottom: 10px;

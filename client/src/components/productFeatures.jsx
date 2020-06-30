@@ -11,8 +11,8 @@ const Grid = styled.div`
 `;
 const Row = styled.div`
   display: flex;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
 `;
 const Col = styled.div`
   flex: ${(props) => props.size};
@@ -28,15 +28,15 @@ const StyledSpan = styled.span`
 `;
 const StyledUL = styled.ul`
   StyledList-style-type: none;
-  font-family: sans-serif;
+  font-family: helvetica;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antiaStyledLiased;
   font-weight: 200;
+  -webkit-font-smoothing: antialiased;
   letter-spacing: .03em;
-  StyledLine-height: 1.5;
+  line-height: 1.5;
   text-rendering: geometricPrecision;
-  margin-left: 20px;
+  margin-left: 70px;
   margin-right: 10px;
 
 `;

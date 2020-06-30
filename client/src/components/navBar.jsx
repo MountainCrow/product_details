@@ -39,11 +39,10 @@ let StyledUl = styled.ul`
 let StyledLi = styled.li`
   margin-left: 25px;
   margin-top: 10px;
-  font-family: helvetica;
-  font-weight: 400;
+  font-family: sans-serif;
+  font-weight: 600;
   font-size: 14px;
   text-align: center;
-  -webkit-text-stroke-width: thin;
   white-space: nowrap;
   &:hover {
     text-decoration: underline;
@@ -53,10 +52,9 @@ let StyledLi = styled.li`
 let StyledLi1 = styled.li`
   margin-top: 10px;
   font-family: sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   text-align: center;
-  -webkit-text-stroke-width: thin;
   &:hover {
     text-decoration: underline;
     text-decoration-color: maroon;
@@ -101,7 +99,7 @@ let StyledButton = styled.button`
   text-align: top;
   border: none;
   font-family: helvetica;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 14px;
   outline: none;
   padding: 0px;

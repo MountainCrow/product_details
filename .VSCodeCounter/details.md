@@ -1,16 +1,17 @@
 # Details
 
-Date : 2020-06-27 19:16:16
+Date : 2020-06-29 19:02:04
 
-Directory /Users/mareks/Documents/SEI/FEC/Product-Details/server
+Directory /Users/mareks/Documents/SEI/FEC/Product-Details/database
 
-Total : 1 files,  30 codes, 4 comments, 10 blanks, all 44 lines
+Total : 2 files,  188 codes, 3 comments, 10 blanks, all 201 lines
 
 [summary](results.md)
 
 ## Files
 | filename | language | code | comment | blank | total |
 | :--- | :--- | ---: | ---: | ---: | ---: |
-| [server/index.js](/server/index.js) | JavaScript | 30 | 4 | 10 | 44 |
+| [database/index.js](/database/index.js) | JavaScript | 65 | 3 | 9 | 77 |
+| [database/sampleData.js](/database/sampleData.js) | JavaScript | 123 | 0 | 1 | 124 |
 
 [summary](results.md)

@@ -20,6 +20,8 @@ let StyledUl = styled.ul`
   justify-content: center;
   padding-left: 0px;
   margin-top: 5px;
+  padding-bottom: 20px;
+
 
 `;
 let StyledUl2 = styled.ul`
@@ -39,12 +41,12 @@ let Styledli = styled.li`
   }
 `;
 let Styledli2 = styled.li`
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-family: helvetica;
+  font-weight: 200;
+  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   letter-spacing: .03em;
-  line-height: 1.5;
+  line-height: 2;
   text-rendering: geometricPrecision;
   white-space: nowrap;
   &:hover {

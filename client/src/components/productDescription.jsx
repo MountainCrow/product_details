@@ -5,7 +5,7 @@ const Grid = styled.div`
   border: 2px;
   border-color: #cfcfcf;
   border-style: solid;
-  margin: 80px;
+  margin: 7%;
 `;
 
 const Row = styled.div`
@@ -31,21 +31,20 @@ const Col2 = styled.div`
 `;
 
 const StyledP = styled.p`
-  font-size: 14px;
   font-weight: 400;
   color: #303030;
-  font-family: sans-serif;
-  letter-spacing: .03em;
-  StyledLine-height: 1.5;
+  font-family: helvetica;
+  font-size: 14px;
+  line-height: 22px;
 `;
 
 const StyledH3 = styled.h3`
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: #303030;
   font-family: sans-serif;
   letter-spacing: .03em;
-  StyledLine-height: 1.5;
+  margin-block-end: 0em;
 `;
 const StyledBorder = styled.div`
   padding-left: 50px;

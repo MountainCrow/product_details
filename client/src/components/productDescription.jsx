@@ -8,7 +8,6 @@ const Grid = styled.div`
   margin: 7%;
   max-width: 1000px;
 `;
-
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -20,7 +19,6 @@ const Row = styled.div`
   margin-right: 20px;
 
 `;
-
 const Col = styled.div`
   flex: ${(props) => props.size};
   margin-left: 50px;
@@ -34,7 +32,6 @@ const Col2 = styled.div`
   margin-top: 50px;
   margin-bottom: 50px;
 `;
-
 const StyledP = styled.p`
   font-weight: 400;
   color: #303030;
@@ -42,7 +39,6 @@ const StyledP = styled.p`
   font-size: 14px;
   line-height: 22px;
 `;
-
 const StyledH3 = styled.h3`
   font-size: 18px;
   font-weight: 600;

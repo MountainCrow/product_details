@@ -3,11 +3,13 @@ import styled from 'styled-components'
 
 
 let StyledDiv = styled.div`
-
+  display: flex;
+  justify-content: center;
 `;
 const Grid = styled.div`
   margin-top: 200px;
   justify-content: center;
+  max-width: 1200px;
 `;
 const Row = styled.div`
   display: flex;

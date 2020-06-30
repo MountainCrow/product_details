@@ -6,8 +6,13 @@ const Grid = styled.div`
   border-color: #cfcfcf;
   border-style: solid;
   margin: 7%;
+  max-width: 1000px;
 `;
 
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 const Row = styled.div`
   display: flex;
   margin-top: 80;
@@ -59,7 +64,7 @@ const StyledBorder = styled.div`
 
 let DescriptionBlock = (props) => {
   return (
-    <div>
+    <StyledDiv>
       <Grid>
         <Row>
           <Col size={1}>
@@ -85,7 +90,7 @@ let DescriptionBlock = (props) => {
           </Col2>
         </Row>
       </Grid>
-    </div>
+    </StyledDiv>
   )
 }
 

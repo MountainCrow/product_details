@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import crest from './swedenLogo.png'
-import logo from './footerLogo.png'
+import crest from './swedenLogo.png';
+import logo from './footerLogo.png';
 
 
 let StyledFooter = styled.footer`
@@ -122,3 +123,5 @@ let Footer = () => {
 }
 
 export default Footer;
+
+ReactDOM.render(<Footer />, document.getElementById('footer'));

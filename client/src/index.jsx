@@ -31,10 +31,8 @@ class App extends React.Component {
     if (this.state.isLoaded) {
       return (
         <div>
-          <Navbar />
           <FeatureList items={this.state.items} />
           <DescriptionBlock items={this.state.items} />
-          <Footer />
         </div>
       )
     }
@@ -48,4 +46,4 @@ class App extends React.Component {
 }
 
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('details'));

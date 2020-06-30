@@ -8,7 +8,7 @@ const Repo = require('../database/index.js')
 
 
 let app = express();
-let port = 3000;
+let port = 3002;
 
 app.use(cors());
 app.use(bodyParser.json());

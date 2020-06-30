@@ -17,7 +17,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    axios.get('http://localhost:3000/database')
+    axios.get('http://localhost:3002/database')
       .then(results => {
         this.setState({
           isLoaded: true,

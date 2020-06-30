@@ -19,8 +19,12 @@ Promise.promisifyAll(require("mongoose"));
 // app.post('/', function (req, res) {
 
 // });
+var corsOptions = {
+  origin: 'http://localhost/3000',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
-const status = app.get('/', function (req, res) {
+const status = app.get('/', cors(corsOptions), function (req, res) {
   res.status(200)
   res.end()
 });

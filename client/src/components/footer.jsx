@@ -74,8 +74,8 @@ let Footer = () => {
     <StyledFooter>
       <StyledDiv>
         <StyledImgContainer>
-          <img src={logo}></img>
-          <StyledCrest src={crest}></StyledCrest>
+          <img src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/footerLogo.png'></img>
+          <StyledCrest src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/swedenLogo.png'></StyledCrest>
         </StyledImgContainer>
         <StyledDiv2>
           <div>

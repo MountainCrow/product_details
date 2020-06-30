@@ -221,7 +221,7 @@ class Navbar extends React.Component {
       <div>
       <StyledHeader>
         <Row>
-          <StyledImg src={logo}></StyledImg>
+          <StyledImg src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/fjallLogo.png'></StyledImg>
           <StyledUl>
            <StyledLi1 onMouseEnter={this.toggleMen}>MEN</StyledLi1>
             <StyledLi onMouseEnter={this.toggleWomen}>WOMEN</StyledLi>
@@ -229,8 +229,8 @@ class Navbar extends React.Component {
             <StyledLi onMouseEnter={this.toggleKids}>KIDS</StyledLi>
             <StyledLi>SUSTAINABILITY</StyledLi>
             <StyledLi onMouseEnter={this.toggleAdventures}>OUR ADVENTURES</StyledLi>
-            <StyledLi2><StyledImg2 src={glass}></StyledImg2><StyledButton onClick={this.toggleSearch}><Button style='  display: table-caption;' searchState={this.state.search} /></StyledButton></StyledLi2>
-            <StyledBagDiv><StyledBag src={bag}></StyledBag><StyledLi3>$0.00</StyledLi3></StyledBagDiv>
+            <StyledLi2><StyledImg2 src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/glass.png'></StyledImg2><StyledButton onClick={this.toggleSearch}><Button style='  display: table-caption;' searchState={this.state.search} /></StyledButton></StyledLi2>
+            <StyledBagDiv><StyledBag src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/bag.png'></StyledBag><StyledLi3>$0.00</StyledLi3></StyledBagDiv>
           </StyledUl>
         </Row>
       </StyledHeader>

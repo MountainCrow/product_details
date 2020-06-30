@@ -67,7 +67,7 @@ class Menus extends React.Component {
     this.adventuresDropDown = this.adventuresDropDown.bind(this)
   }
 
-// Drop down menus and styling
+  // Drop down menus and styling
   mensDropDown() {
     return (
       <StyledDiv>
@@ -252,7 +252,7 @@ class Menus extends React.Component {
     )
   };
 
-// Conditional rendering of dropdown menus - dependent on state passed down from navBar.jsx
+  // Conditional rendering of dropdown menus - dependent on state passed down from navBar.jsx
   render() {
     if (this.props.menMenuDropDownState) {
       return (

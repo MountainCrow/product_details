@@ -28,7 +28,7 @@ let StyledHeader = styled.header`
   position: fixed;
   top: -5px;
   background: white;
-  z-index: 2;
+  z-index: 11;
 `;
 let StyledUl = styled.ul`
   list-style: none;
@@ -130,7 +130,8 @@ class Navbar extends React.Component {
       bagsDropDown: false,
       kidsDropDown: false,
       adventuresDropDown: false,
-      search: false
+      search: false,
+      cart: '0'
     };
   }
 
@@ -230,7 +231,7 @@ class Navbar extends React.Component {
             <StyledLi>SUSTAINABILITY</StyledLi>
             <StyledLi onMouseEnter={this.toggleAdventures}>OUR ADVENTURES</StyledLi>
             <StyledLi2><StyledImg2 src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/glass.png'></StyledImg2><StyledButton onClick={this.toggleSearch}><Button style='  display: table-caption;' searchState={this.state.search} /></StyledButton></StyledLi2>
-            <StyledBagDiv><StyledBag src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/bag.png'></StyledBag><StyledLi3>$0.00</StyledLi3></StyledBagDiv>
+            <StyledBagDiv><StyledBag src='https://fecproductiondescription.s3-us-west-1.amazonaws.com/bag.png'></StyledBag><StyledLi3>${this.state.cart}.00</StyledLi3></StyledBagDiv>
           </StyledUl>
         </Row>
       </StyledHeader>

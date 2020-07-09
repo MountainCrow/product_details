@@ -59,7 +59,7 @@ let FeatureList = (props) => {
     <StyledDiv>
       <Grid>
         <Row>
-          <Col size={1}>
+          <Col size={1}> 
             <StyledUL>
               <StyledSpan>PRODUCT FEATURES</StyledSpan>
               <StyledLi>{props.items.data[0].feature1}</StyledLi>

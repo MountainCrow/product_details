@@ -17,8 +17,10 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+    console.log('hellow')
     axios.get('http://localhost:3002/database')
       .then(results => {
+        console.log(results.data)
         this.setState({
           isLoaded: true,
           items: results

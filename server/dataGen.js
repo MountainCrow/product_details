@@ -1,8 +1,8 @@
 const faker = require('faker');
-//const createCSV= require('csv-writer').createObjectCsvWriter;
+
 const createCSV= require('csv-writer').createObjectCsvStringifier;
 const fs = require('fs');
-//  path:'../data4.csv',
+
 const csvStr = createCSV({
   header:[
       {id:'id',title:'id'},
@@ -29,7 +29,7 @@ const csvStr = createCSV({
     ]
 });
 
-fs.writeFileSync('postData.csv',csvStr.getHeaderString(),(err)=>{
+fs.writeFileSync('postData10.csv',csvStr.getHeaderString(),(err)=>{
   if(err)
   {
     console.log(err);
@@ -38,7 +38,7 @@ fs.writeFileSync('postData.csv',csvStr.getHeaderString(),(err)=>{
   }
 
 })
-for(var i = 10; i<1000000;i++){
+for(var i = 9000000; i<10000001;i++){
   var feature1= faker.lorem.sentence();
   var feature2= faker.lorem.sentence();
   var feature3= faker.lorem.sentence();
@@ -84,7 +84,7 @@ for(var i = 10; i<1000000;i++){
     image:image,
   }]
 
-  fs.appendFileSync('postData.csv',csvStr.stringifyRecords(record),(err)=>{
+  fs.appendFileSync('postData10.csv',csvStr.stringifyRecords(record),(err)=>{
     if(err){
       console.log('err'+err)
     }else{

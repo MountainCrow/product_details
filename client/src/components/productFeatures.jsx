@@ -43,10 +43,9 @@ const StyledUL = styled.ul`
 
 `;
 const StyledImg = styled.img`
-  width: 91%;
-  margin-left: 10px;
+  margin-left: 200px;
   margin-right: 10px;
-  position: centered;
+  position: center;
 `;
 const StyledLi = styled.li`
   margin-top: 15px;
@@ -59,7 +58,7 @@ let FeatureList = (props) => {
     <StyledDiv>
       <Grid>
         <Row>
-          <Col size={1}> 
+          <Col size={1}>
             <StyledUL>
               <StyledSpan>PRODUCT FEATURES</StyledSpan>
               <StyledLi>{props.items.data[0].feature1}</StyledLi>
@@ -70,7 +69,9 @@ let FeatureList = (props) => {
             </StyledUL>
           </Col>
           <Col size={1.8}>
-            <StyledImg src={props.items.data[0].image}></StyledImg>
+            <div className= "image-wrapper">
+              <StyledImg src={props.items.data[0].image}></StyledImg>
+            </div>
           </Col>
         </Row>
       </Grid>

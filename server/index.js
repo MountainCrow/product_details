@@ -7,6 +7,7 @@ const path = require('path');
 const Promise = require('bluebird');
 const router = require('../routes/router.js');
 const DB = require('../database/postDB.js');
+//const data = require('./dataGen.js')
 
 let port = process.env.PORT||3002;
 

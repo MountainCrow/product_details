@@ -6,11 +6,10 @@ router.get('/database',(req,res)=>{
 
   pool.query("SELECT * FROM clothing")
   .then((data)=>{
+    
     res.send(data.rows);
   })
   .catch(e=> console.error(e.stack))
-
-
 
 })
 

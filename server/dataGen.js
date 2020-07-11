@@ -29,7 +29,7 @@ const csvStr = createCSV({
     ]
 });
 
-fs.writeFileSync('postData10.csv',csvStr.getHeaderString(),(err)=>{
+fs.writeFileSync('postData2.csv',csvStr.getHeaderString(),(err)=>{
   if(err)
   {
     console.log(err);
@@ -38,7 +38,7 @@ fs.writeFileSync('postData10.csv',csvStr.getHeaderString(),(err)=>{
   }
 
 })
-for(var i = 9000000; i<10000001;i++){
+//for(var i =1000000; i<1865207;i++){
   var feature1= faker.lorem.sentence();
   var feature2= faker.lorem.sentence();
   var feature3= faker.lorem.sentence();
@@ -58,7 +58,7 @@ for(var i = 9000000; i<10000001;i++){
   var weigthspec = Math.floor(Math.random() * Math.floor(400));
   var additionalcare = faker.lorem.sentence();
   var productid = Math.floor(Math.random() * Math.floor(15));
-  var image = faker.lorem.word()+".png"
+  var image = 'https://product-details-sdc.s3-us-west-1.amazonaws.com/Screen+Shot+2020-07-08+at+4.20.00+PM.png';
 
   var record = [{
     id:i,
@@ -84,7 +84,7 @@ for(var i = 9000000; i<10000001;i++){
     image:image,
   }]
 
-  fs.appendFileSync('postData10.csv',csvStr.stringifyRecords(record),(err)=>{
+  fs.appendFileSync('postData2.csv',csvStr.stringifyRecords(record),(err)=>{
     if(err){
       console.log('err'+err)
     }else{

@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const faker = require('faker')
-
 var ObjectID = require('mongodb').ObjectID;
 
 //item 1
@@ -10,6 +9,7 @@ var ObjectID = require('mongodb').ObjectID;
 //var look = "5f0925278ccd55e775d28b3c"
 //item 10,000,000
 var look = "5f09286c8ccd55e7751ed67d";
+
 router.get('/database',(req,res)=>{
   const collection = req.app.locals.collection;
   collection.find({_id:new ObjectID(look)})
@@ -79,7 +79,6 @@ router.post('/database',(req,res)=>{
         productid:productid,
         image:image,
       };
-      console.log(index)
       collection.insertOne(record,(err,data)=>{
         res.json(data)
       })

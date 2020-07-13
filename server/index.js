@@ -4,27 +4,31 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
-const Promise = require('bluebird');
-var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/Products';
-//Postgress DB and router
-//const router = require('../routes/router.js');
-//const DB = require('../database/postDB.js');
+
+
+//add title to locals app locals obj
+app.locals.title = "My Product Details App"
 
 //data generation
 //const data = require('./dataGen.js')
 
-//mongo db and router;
-//const DB = require('../database/mongoDb.js');
-const router = require('../routes/MongoRouter.js');
+//Postgress DB and router
+const router = require('../routes/router.js');
+const DB = require('../database/postDB.js');
 
-MongoClient.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true },function (err, client) {
-  if(err) throw err;
-  console.log('Connected DB')
-  const db= client.db('Products');
-  const collection = db.collection('clothing');
-  app.locals.collection = collection;
-});
+
+//mongo db and router;
+// var MongoClient = require('mongodb').MongoClient;
+// var url = 'mongodb://localhost:27017/Products'||process.env.DB;
+// const router = require('../routes/MongoRouter.js');
+// MongoClient.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true },function (err, client) {
+//   if(err) throw err;
+//   console.log('Connected DB')
+//   const db= client.db('Products');
+//   const collection = db.collection('clothing');
+//   app.locals.collection = collection;
+// });
+
 
 let port = process.env.PORT||3002;
 

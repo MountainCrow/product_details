@@ -1,23 +1,24 @@
 /* eslint-disable */
 const request = require('supertest')
 const app = require('../server/index.js')
+const router = require('../routes/router.js');
+const helpers= require('./helpers.js')
 
 jest.useFakeTimers();
 
 describe('Server Endpoints', () => {
-  it('should return a response of 200', async done => {
-    const res = await request(app)
-    .get('/')
 
-    expect(res.status).toBe(200)
+  it('should return 200 code', async done=>{
+    var code = await helpers.getStatus();
+    expect(code).toStrictEqual('OK')
     done();
-  }),
-
-  it('Should return an array of documents from the database', async done => {
-    const res = await request(app)
-    .get('/database')
-
-    expect(res.body.length).toBe(1)
-    done()
   })
+  it('should return array holding an object at position 0', async done=>{
+    var productArr = await helpers.getProduct();
+    expect(Array.isArray(productArr)).toStrictEqual(true)
+    expect(typeof productArr[0]).toStrictEqual('object')
+    expect(productArr.length).toStrictEqual(1)
+    done();
+  })
+
 })

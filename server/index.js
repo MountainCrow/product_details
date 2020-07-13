@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 let app = express();
 const cors = require('cors');
@@ -37,6 +38,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
+
+
 
 app.use('/',router);
 

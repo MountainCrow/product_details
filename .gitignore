@@ -3,3 +3,4 @@ client/dist/bundle.js
 config.js
 .env
 aws-keys.json
+newrelic_agent.log

@@ -11,7 +11,7 @@ router.get('/status', function (req, res) {
 });
 
 router.get('/database',(req,res)=>{
-  pool.query("SELECT * FROM clothing WHERE id =15")
+  pool.query("SELECT * FROM clothing WHERE id = 1")
   .then((data)=>{
     //count to test server count/ artiller count
     // count = count +1

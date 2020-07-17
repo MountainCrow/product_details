@@ -17,8 +17,8 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-
-    axios.get('http://52.53.156.169/database')
+    //update when db is deployed **update bundle.js/ upload to s3
+    axios.get('http://54.183.30.75/database')
       .then(results => {
         this.setState({
           isLoaded: true,

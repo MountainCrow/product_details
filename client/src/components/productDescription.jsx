@@ -80,7 +80,7 @@ let DescriptionBlock = (props) => {
               <StyledP><strong>Width: </strong>{props.items.data[0].widthspec} cm</StyledP>
               <StyledP><strong>Depth: </strong>{props.items.data[0].depthspec} cm</StyledP>
               <StyledP><strong>Volume: </strong>{props.items.data[0].volumespec} l</StyledP>
-              <StyledP><strong>Weight: </strong> {props.items.data[0].weigthspec} g</StyledP>
+              <StyledP><strong>Weight: </strong> {props.items.data[0].weightspec} g</StyledP>
               <StyledP><strong>Additional Care Instructions: </strong>{props.items.data[0].additionalcare}</StyledP>
             </StyledBorder>
           </Col2>

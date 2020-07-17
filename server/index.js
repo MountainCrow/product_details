@@ -40,7 +40,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
-
+app.get('/loaderio-8afa083c6413c91cf6d4354baeed2ef2.txt',(req,res)=>{
+  res.send("loaderio-8afa083c6413c91cf6d4354baeed2ef2")
+})
 
 app.use('/',router);
 

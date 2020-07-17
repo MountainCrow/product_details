@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database/postDB.js');
 const faker = require('faker');
-var count = 0;
+
 
 router.get('/status', function (req, res) {
   res.status(200)
@@ -13,11 +13,8 @@ router.get('/status', function (req, res) {
 router.get('/database',(req,res)=>{
   pool.query("SELECT * FROM clothing WHERE id = 1")
   .then((data)=>{
-    //count to test server count/ artiller count
-    // count = count +1
-    // console.log(count);
-    // //log item id to ensure each request has an item resonse
-    // console.log(data.rows[0].id)
+
+
     res.json(data.rows);
   })
   .catch((err)=>{

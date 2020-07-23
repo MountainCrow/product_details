@@ -18,12 +18,16 @@ class App extends React.Component {
 
   componentDidMount() {
     //update when db is deployed **update bundle.js/ upload to s3
-    axios.get('http://54.183.30.75/database')
+
+    axios.get('http://54.219.173.1/database')
       .then(results => {
         this.setState({
           isLoaded: true,
           items: results
         })
+      })
+      .catch((err)=>{
+        console.log(err)
       })
   };
 

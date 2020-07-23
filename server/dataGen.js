@@ -1,7 +1,8 @@
 const faker = require('faker');
-
 const createCSV= require('csv-writer').createObjectCsvStringifier;
 const fs = require('fs');
+
+//DATA GENERATOR: USED TO CREATE CSV FILES CONTAINING 1M DATA RECORDS AT A TIME
 
 const csvStr = createCSV({
   header:[
@@ -38,7 +39,7 @@ fs.writeFileSync('postData2.csv',csvStr.getHeaderString(),(err)=>{
   }
 
 })
-//for(var i =1000000; i<1865207;i++){
+for(var i =9000000; i<10000001;i++){
   var feature1= faker.lorem.sentence();
   var feature2= faker.lorem.sentence();
   var feature3= faker.lorem.sentence();

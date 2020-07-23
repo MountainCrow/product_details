@@ -1,12 +1,11 @@
 require('dotenv').config();
-//require('newrelic');
+require('newrelic');
 const express = require('express');
 let app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
-
 
 //add title to locals app locals obj
 app.locals.title = "My Product Details App"
@@ -18,7 +17,7 @@ app.locals.title = "My Product Details App"
 const router = require('../routes/router.js');
 const DB = require('../database/postDB.js');
 
-
+/*             USUED FOR TESTING/COMPARING MONGO VS POSTGRES */
 //mongo db and router;
 // var MongoClient = require('mongodb').MongoClient;
 // var url = 'mongodb://localhost:27017/Products'||process.env.DB;
@@ -31,7 +30,6 @@ const DB = require('../database/postDB.js');
 //   app.locals.collection = collection;
 // });
 
-
 let port = process.env.PORT||3002;
 
 app.use(morgan('dev'));
@@ -40,9 +38,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/loaderio-8afa083c6413c91cf6d4354baeed2ef2.txt',(req,res)=>{
-  res.send("loaderio-8afa083c6413c91cf6d4354baeed2ef2")
-})
+//ROUTE USED FOR LOADER IO TESTING
+// app.get('/loaderio-8afa083c6413c91cf6d4354baeed2ef2.txt',(req,res)=>{
+//   res.send("loaderio-8afa083c6413c91cf6d4354baeed2ef2")
+// })
 
 app.use('/',router);
 

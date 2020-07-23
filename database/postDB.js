@@ -1,5 +1,6 @@
 const {Pool,Client} = require('pg');
 
+//CONNECTION TO LOCAL DATABASE
 // const pool = new Pool({
 //   user:'eduardoramos',
 //   password: 'Cruzazul',
@@ -8,6 +9,7 @@ const {Pool,Client} = require('pg');
 //   database:'products',
 // })
 
+//CONNECTION TO DEPLOYED DATABASE
 const pool = new Pool({
   user:'postgres',
   password: 'Cruzazul',
@@ -15,7 +17,6 @@ const pool = new Pool({
   port:'5432',
   database:'products',
 })
-
 
 pool.connect()
   .then(()=>{

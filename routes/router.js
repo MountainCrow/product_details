@@ -3,27 +3,24 @@ const router = express.Router();
 const pool = require('../database/postDB.js');
 const faker = require('faker');
 
-
+//ROUTE STATUS USED FOR TESTING
 router.get('/status', function (req, res) {
   res.status(200)
   res.sendStatus(200)
   res.end()
 });
-
+//GET ROUTE USED TO RETIEVED DATA NECESSARY FOR COMPONENT
 router.get('/database',(req,res)=>{
   pool.query("SELECT * FROM clothing WHERE id = 1")
   .then((data)=>{
-
-
     res.json(data.rows);
   })
   .catch((err)=>{
     console.log(err)
     res.send(err)
   })
-
 })
-
+//GET ROUTE USED TO FOR TESTING PURPOSES: RETURNS A RANGE OF DATA RECORDS
 router.get('/database/range',(req,res)=>{
   pool.query('SELECT * FROM clothing WHERE id BETWEEN 9900000 AND 10000000')
     .then((data)=>{
@@ -33,9 +30,8 @@ router.get('/database/range',(req,res)=>{
       res.send(err);
     })
 })
-
+//POST ROUTE USED FOR TESTING PURPOSES: ADDS ON RECORD TO DATABASE
 router.post('/database',(req,res)=>{
-
   pool.query("SELECT MAX(id) FROM clothing;")
     .then((data)=>{
       count = count +1
@@ -56,9 +52,8 @@ router.post('/database',(req,res)=>{
     })
 
 })
-
+//POST ROUTE USED FOR TESTING PURPOSES: ADD SEVERAL RECORDS TO DATABASE
 router.post('/database/mult',(req,res)=>{
-
   pool.query("SELECT MAX(id) FROM clothing;")
     .then((data)=>{
       var index = Number(data.rows[0].max)+1;
@@ -83,14 +78,13 @@ router.post('/database/mult',(req,res)=>{
     .catch((err)=>{
       res.send(err);
     })
-
 })
-
+//PUT ROUTE NOT USED IN COMPONENT
 router.put('/database',(req,res)=>{
-  res.send('works three')
+  res.send('works')
 })
+//PUT ROUTE NOT USED IN COMPONENT
 router.delete('/database',(req,res)=>{
-  res.send('works four')
+  res.send('works')
 })
-
 module.exports = router;

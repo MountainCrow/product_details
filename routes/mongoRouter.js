@@ -10,6 +10,7 @@ var ObjectID = require('mongodb').ObjectID;
 //item 10,000,000
 var look = "5f09286c8ccd55e7751ed67d";
 
+//GET ROUTE TO GET ONE DOCUMENT FROM DATABASE
 router.get('/database',(req,res)=>{
   const collection = req.app.locals.collection;
   collection.find({_id:new ObjectID(look)})
@@ -18,7 +19,8 @@ router.get('/database',(req,res)=>{
     res.send(data);
   })
 })
-//get range
+
+//GET ROUTE TO RETURN A RANGE OF DOCUMENTS
 router.get('/database/range',(req,res)=>{
   const collection = req.app.locals.collection;
   collection.find({})
@@ -29,6 +31,7 @@ router.get('/database/range',(req,res)=>{
     })
 })
 
+//POST ROUTE TO INSERTONE TIME TO MONGO DB
 router.post('/database',(req,res)=>{
   const collection = req.app.locals.collection;
   collection.find({})
@@ -86,11 +89,14 @@ router.post('/database',(req,res)=>{
     })
 })
 
+//ROUTE NOT USED IN COMPONENT
 router.put('/database',(req,res)=>{
-  res.send('works three')
+  res.send('works')
 })
-router.delete('/database',(req,res)=>{
-  res.send('works four')
+
+//ROUTE NOT USED IN COMPONENT
+router.delete('/Database',(req,res)=>{
+  res.send('works')
 })
 
 

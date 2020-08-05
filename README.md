@@ -1,16 +1,16 @@
 # Product_details
-> This project contains a backend build.  
+MountainCrow is a full stack application that displays various products with their details, descriptions, and reviews. The goal of the application was to focus on deployment and scalability. Each component of the application was separately scaled and load-balanced using AWS EC2 instances and NGINX.
+
+This repository holds the product details component of the MountainCrow application. This module was scaled and stress tested at 10,000 request per second. The average latency was 65.4ms with a .001% error margin. 
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/MountainCrow/Product-description-service
+  - https://github.com/MountainCrow/reviews
   - https://github.com/teamName/repo
 
 ## Table of Contents
 
-1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
